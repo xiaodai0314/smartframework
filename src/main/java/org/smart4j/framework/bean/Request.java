@@ -1,5 +1,10 @@
 package org.smart4j.framework.bean;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import java.util.Objects;
+
 /**
  * 封装请求信息
  */
@@ -26,14 +31,29 @@ public class Request {
     public String getRequestPath() {
         return requestPath;
     }
-
+/*
     @Override
     public int hashCode() {
-        return super.hashCode();
+        //问题1解决方法 重写hashcode和equals
+        return HashCodeBuilder.reflectionHashCode(this);
     }
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        return EqualsBuilder.reflectionEquals(this, obj);
+    }*/
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Request request = (Request) o;
+        return Objects.equals(requestMethod, request.requestMethod) &&
+                Objects.equals(requestPath, request.requestPath);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(requestMethod, requestPath);
     }
 }
