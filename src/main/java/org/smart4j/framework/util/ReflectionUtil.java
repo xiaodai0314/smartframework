@@ -32,6 +32,10 @@ public class ReflectionUtil {
     public static Object invokeMethod(Object obj, Method method, Object... args) {
         Object result;
         try {
+            //解决方法无需参数的method可以invoke
+            if(method.getParameterCount() == 0) {
+                args = null;
+            }
             method.setAccessible(true);
             result = method.invoke(obj, args);
         } catch (Exception e) {
