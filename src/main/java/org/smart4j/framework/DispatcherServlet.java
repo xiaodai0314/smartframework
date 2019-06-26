@@ -109,5 +109,9 @@ public class DispatcherServlet extends HttpServlet {
                 }
             }
         }
+        //设置欢迎页面
+        if (requestPath == null || StringUtil.isEmpty(requestPath)) {
+            request.getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(request, response);
+        }
     }
 }
