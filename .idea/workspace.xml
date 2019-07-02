@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96d45e08-e065-4103-8a24-ec9d6e82961a" name="Default Changelist" comment="修改map不能get key为对象的问题, 解决方法 重写hash和equals">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/annotation/Impl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AspectProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/annotation/Aspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/Proxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/ProxyChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/ProxyManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Impl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/AopHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/AspectProxy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/annotation/Aspect.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/Proxy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyChain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyManager$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/DatabaseHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/TransactionProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/annotation/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapter1/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapter1/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapter1/.idea/encodings.xml" beforeDir="false" />
@@ -42,44 +27,9 @@
       <change beforePath="$PROJECT_DIR$/../chapter1/target/chapter1-1.0.0/WEB-INF/web.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapter1/target/classes/org/smart4j/chapter1/HelloServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/HelperLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/HelperLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/BeanHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/BeanHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ClassHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ClassHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ControllerHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ControllerHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/IocHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/IocHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/ClassUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/ClassUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/ConfigConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/ConfigConstant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/DispatcherServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/DispatcherServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/HelperLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/HelperLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Inject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Inject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Handler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Param.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Param.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/BeanHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/BeanHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/ClassHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/ClassHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/ConfigHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/ConfigHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/ControllerHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/ControllerHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/IocHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/IocHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ArrayUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ArrayUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/CastUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/CastUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ClassUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ClassUtil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ClassUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ClassUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/CodecUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/CodecUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/CollectionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/CollectionUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/JsonUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/JsonUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/PropsUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/PropsUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ReflectionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ReflectionUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/StreamUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/StreamUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/StringUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/smart-framework-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/smart-framework-1.0.0.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -121,11 +71,48 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="220" selection-start-line="220" selection-end-line="220" />
+            <state relative-caret-position="533">
+              <caret line="288" column="43" selection-start-line="288" selection-start-column="43" selection-end-line="288" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/TransactionProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="37">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="925">
+              <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/annotation/Transaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/annotation/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/Test.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/DispatcherServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/annotation/Impl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/BeanHelper.java" />
@@ -195,9 +181,13 @@
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/ProxyManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AspectProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/HelperLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ControllerHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/ReflectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/annotation/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/TransactionProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java" />
       </list>
     </option>
   </component>
@@ -292,6 +282,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="framework" type="462c0819:PsiDirectoryNode" />
               <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="tx" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -402,7 +401,7 @@
       <workItem from="1561620946846" duration="470000" />
       <workItem from="1561621590182" duration="1936000" />
       <workItem from="1561682061620" duration="13076000" />
-      <workItem from="1561787765855" duration="12236000" />
+      <workItem from="1561787765855" duration="14557000" />
     </task>
     <task id="LOCAL-00001" summary="My first commit;">
       <created>1561340185611</created>
@@ -439,11 +438,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561523994798</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="IOC测试通过,添加AOP功能,测试未通过">
+      <created>1562033910624</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562033910624</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71688000" />
+    <option name="totallyTimeSpent" value="74009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,6 +462,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1904762" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -482,7 +489,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.23260073" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.23260073" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.32967034" />
@@ -497,7 +504,8 @@
     <MESSAGE value="修改map不能get key为对象的问题, 解决方法 重写hash和equals" />
     <MESSAGE value="问题2, method.invoke(object, ...args) 参数类型和数量要与method匹配" />
     <MESSAGE value="添加数据库访问功能 使用ThreadLocal" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加数据库访问功能 使用ThreadLocal" />
+    <MESSAGE value="IOC测试通过,添加AOP功能,测试未通过" />
+    <option name="LAST_COMMIT_MESSAGE" value="IOC测试通过,添加AOP功能,测试未通过" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -923,16 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/IocHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -943,10 +941,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/annotation/tx/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/annotation/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
+        <state relative-caret-position="533">
+          <caret line="288" column="43" selection-start-line="288" selection-start-column="43" selection-end-line="288" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/TransactionProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
