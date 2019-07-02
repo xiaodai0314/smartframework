@@ -6,6 +6,7 @@ import org.smart4j.framework.util.ClassUtil;
 
 import java.lang.annotation.Annotation;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -16,6 +17,8 @@ public class ClassHelper {
      * 定义类集合(用于存放所加载的类)
      */
     private static final Set<Class<?>> CLASS_SET;
+
+
 
     static {
         String basePackage = ConfigHelper.getAppBasePackage();
@@ -35,8 +38,9 @@ public class ClassHelper {
     public static Set<Class<?>> getServiceClassSet() {
         Set<Class<?>> classSet = new HashSet<Class<?>>();
         for(Class<?> cls : CLASS_SET) {
-            if(cls.isAnnotationPresent(Service.class));
-            classSet.add(cls);
+            if(cls.isAnnotationPresent(Service.class)) {
+                classSet.add(cls);
+            }
         }
         return classSet;
     }
@@ -47,8 +51,9 @@ public class ClassHelper {
     public static Set<Class<?>> getControllerClassSet() {
         Set<Class<?>> classSet = new HashSet<Class<?>>();
         for(Class<?> cls : CLASS_SET) {
-            if(cls.isAnnotationPresent(Controller.class));
-            classSet.add(cls);
+            if(cls.isAnnotationPresent(Controller.class)) {
+                classSet.add(cls);
+            }
         }
         return classSet;
     }
@@ -75,6 +80,7 @@ public class ClassHelper {
         }
         return classSet;
     }
+
 
     /**
      * 获取应用包名下带有某注解的所有类

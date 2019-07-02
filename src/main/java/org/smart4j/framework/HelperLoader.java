@@ -1,5 +1,6 @@
 package org.smart4j.framework;
 
+import org.smart4j.framework.aop.AopHelper;
 import org.smart4j.framework.helper.BeanHelper;
 import org.smart4j.framework.helper.ClassHelper;
 import org.smart4j.framework.helper.ControllerHelper;
@@ -14,8 +15,9 @@ public final class HelperLoader {
         Class<?>[] classList = {
                 ClassHelper.class,
                 BeanHelper.class,
-                IocHelper.class,
-                ControllerHelper.class
+                AopHelper.class,
+                ControllerHelper.class,
+                IocHelper.class
         };
         for(Class<?> cls : classList) {
             ClassUtil.loadClass(cls.getName());

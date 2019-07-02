@@ -63,8 +63,6 @@ public class ControllerHelper {
     public static Handler getHandler(String requestMethod, String requestPath) {
         //问题1:request是new出来的 hashcode变化 所以map get不到
         Request request = new Request(requestMethod, requestPath);
-        Map<Request, Handler> map = ACTION_MAP;
-        Handler handler =  map.get(request);
         return ACTION_MAP.get(request);
     }
 }

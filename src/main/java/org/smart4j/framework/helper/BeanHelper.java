@@ -1,5 +1,8 @@
 package org.smart4j.framework.helper;
 
+import org.smart4j.framework.annotation.Action;
+import org.smart4j.framework.annotation.Controller;
+import org.smart4j.framework.annotation.Service;
 import org.smart4j.framework.util.ReflectionUtil;
 
 import java.util.HashMap;
@@ -17,11 +20,18 @@ public class BeanHelper {
     private static final Map<Class<?>, Object> BEAN_MAP = new HashMap<Class<?>, Object>();
 
     static {
-        Set<Class<?>> beanClassSet = ClassHelper.getBeanClassSet();
-        for(Class<?> beanClass : beanClassSet) {
-            Object obj = ReflectionUtil.newInstance(beanClass);
-            BEAN_MAP.put(beanClass, obj);
+        try {
+            Set<Class<?>> beanClassSet = ClassHelper.getBeanClassSet();
+            for(Class<?> beanClass : beanClassSet) {
+                if(beanClass.isAnnotationPresent(Controller.class) || beanClass.isAnnotationPresent(Service.class)) {
+                    Object obj = ReflectionUtil.newInstance(beanClass);
+                    BEAN_MAP.put(beanClass, obj);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("初始化 BeanHelper 出错！",e);
         }
+
     }
 
     /**
