@@ -45,30 +45,32 @@ public class DispatcherServlet extends HttpServlet {
 
     @Override
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //获取请求方法和请求路径
-        String requestMethod = request.getMethod().toUpperCase();
-        String requestPath = request.getPathInfo();
-        if (requestPath.equals("/favicon.ico")) {
-            return;
-        }
-        //获取 Action 处理器
-        Handler handler = ControllerHelper.getHandler(requestMethod, requestPath);
-        if(handler != null) {
-            //获取 Controller 类及其 Bean 实例
-            Class<?> controllerClass = handler.getControllerClass();
-            Object controllerBean = BeanHelper.getBean(controllerClass);
-            //dispatcher优化
-            Param param;
-            if (UploadHelper.isMultipart(request)) {
-                param = UploadHelper.createParam(request);
-            } else {
-                param = RequestHelper.createParam(request);
+        ServletHelper.init(request, response);
+        try {
+            //获取请求方法和请求路径
+            String requestMethod = request.getMethod().toUpperCase();
+            String requestPath = request.getPathInfo();
+            if (requestPath.equals("/favicon.ico")) {
+                return;
             }
+            //获取 Action 处理器
+            Handler handler = ControllerHelper.getHandler(requestMethod, requestPath);
+            if(handler != null) {
+                //获取 Controller 类及其 Bean 实例
+                Class<?> controllerClass = handler.getControllerClass();
+                Object controllerBean = BeanHelper.getBean(controllerClass);
+                //dispatcher优化
+                Param param;
+                if (UploadHelper.isMultipart(request)) {
+                    param = UploadHelper.createParam(request);
+                } else {
+                    param = RequestHelper.createParam(request);
+                }
 
-            Object result;
-            Method actionMethod = handler.getActionMethod();
-            result = ReflectionUtil.invokeMethod(controllerBean, actionMethod, param);
-            //创建请求参数
+                Object result;
+                Method actionMethod = handler.getActionMethod();
+                result = ReflectionUtil.invokeMethod(controllerBean, actionMethod, param);
+                //创建请求参数
             /*Map<String, Object> paramMap = new HashMap<String, Object>();
             Enumeration<String> paramNames = request.getParameterNames();
             while (paramNames.hasMoreElements()) {
@@ -95,18 +97,21 @@ public class DispatcherServlet extends HttpServlet {
             Method actionMethod = handler.getActionMethod();
             //问题2, method.invoke(object, ...args) 参数类型和数量要与method匹配
             Object result = ReflectionUtil.invokeMethod(controllerBean, actionMethod, param);*/
-            //处理 Action 方法返回值
-            if(result instanceof View) {
-                //返回jsp页面
-                handleViewResult((View) result, request, response);
-            } else if(result instanceof Data) {
-                //返回json数据
-                handleDataResult((Data) result, request, response);
+                //处理 Action 方法返回值
+                if(result instanceof View) {
+                    //返回jsp页面
+                    handleViewResult((View) result, request, response);
+                } else if(result instanceof Data) {
+                    //返回json数据
+                    handleDataResult((Data) result, request, response);
+                }
             }
-        }
-        //设置欢迎页面
-        if (requestPath == null || StringUtil.isEmpty(requestPath)) {
-            request.getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(request, response);
+            //设置欢迎页面
+            if (requestPath == null || StringUtil.isEmpty(requestPath)) {
+                request.getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(request, response);
+            }
+        } finally {
+            ServletHelper.destory();
         }
     }
 
