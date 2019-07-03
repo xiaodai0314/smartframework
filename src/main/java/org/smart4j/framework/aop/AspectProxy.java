@@ -7,11 +7,12 @@ import org.smart4j.framework.aop.proxy.ProxyChain;
 
 import java.lang.reflect.Method;
 
-public class AspectProxy implements Proxy {
-    private static final Logger LOGGER = LoggerFactory.getLogger(AspectProxy.class);
+public abstract class AspectProxy implements Proxy {
+
+    private static final Logger logger = LoggerFactory.getLogger(AspectProxy.class);
 
     @Override
-    public Object doProxy(ProxyChain proxyChain) throws Throwable {
+    public final Object doProxy(ProxyChain proxyChain) throws Throwable {
         Object result = null;
 
         Class<?> cls = proxyChain.getTargetClass();
@@ -20,16 +21,16 @@ public class AspectProxy implements Proxy {
 
         begin();
         try {
-            if(intercept(cls, method, params)) {
-                befor(cls, method, params);
+            if (intercept(cls, method, params)) {
+                before(cls, method, params);
                 result = proxyChain.doProxyChain();
-                after(cls, method, params);
+                after(cls, method, params, result);
             } else {
-                result  = proxyChain.doProxyChain();
+                result = proxyChain.doProxyChain();
             }
         } catch (Exception e) {
-            LOGGER.error("proxy failure", e);
-            error(cls, method, params);
+            logger.error("AOP 异常", e);
+            error(cls, method, params, e);
             throw e;
         } finally {
             end();
@@ -39,26 +40,21 @@ public class AspectProxy implements Proxy {
     }
 
     public void begin() {
-
     }
 
-    public boolean intercept(Class<?> cls, Method method, Object[] params) throws Throwable{
+    public boolean intercept(Class<?> cls, Method method, Object[] params) throws Throwable {
         return true;
     }
 
-    public void befor(Class<?> cls, Method method, Object[] params) throws Throwable {
-
+    public void before(Class<?> cls, Method method, Object[] params) throws Throwable {
     }
 
-    public void after(Class<?> cls, Method method, Object[] params) throws Throwable {
-
+    public void after(Class<?> cls, Method method, Object[] params, Object result) throws Throwable {
     }
 
-    public void error(Class<?> cls, Method method, Object[] params) throws Throwable {
-
+    public void error(Class<?> cls, Method method, Object[] params, Throwable e) {
     }
 
     public void end() {
-
     }
 }

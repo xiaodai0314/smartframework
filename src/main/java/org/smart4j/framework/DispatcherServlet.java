@@ -1,5 +1,6 @@
 package org.smart4j.framework;
 
+import org.smart4j.framework.aop.AopHelper;
 import org.smart4j.framework.bean.Data;
 import org.smart4j.framework.bean.Handler;
 import org.smart4j.framework.bean.Param;
@@ -30,6 +31,8 @@ public class DispatcherServlet extends HttpServlet {
     public void init(ServletConfig servletConfig) throws ServletException {
         //初始化相关 Helper 类
         HelperLoader.init();
+        //Aop测试
+//        AopHelper.doAopHelper();
         //获取 ServletContext 对象 (用于注册 Servlet)
         ServletContext servletContext = servletConfig.getServletContext();
         //注册处理JSP 的 Servlet

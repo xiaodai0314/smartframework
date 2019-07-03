@@ -45,8 +45,8 @@ public class IocHelper {
                                     /*beanField.setAccessible(true);
                                     beanField.set(beanInstance, implementInstance);*/
                                     //通过反射初始化BeanField的值
-                                    LOGGER.debug("beanInstance: " + beanInstance + "  beanField: " + beanField + "implementInstance" +
-                                            implementInstance);
+//                                    LOGGER.debug("beanInstance: " + beanInstance + "  beanField: " + beanField + "implementInstance" +
+//                                            implementInstance);
                                     //问题3,依赖注入失败. 设置成员的私有变量
                                     ReflectionUtil.setField(beanInstance, beanField, implementInstance);
 
@@ -80,49 +80,4 @@ public class IocHelper {
         }
         return implementClass;
     }
-
-    public static void iocAgain() {
-        //        获取所有的Bean类与Bean实例之间的映射关系
-        Map<Class<?>, Object> beanMap = BeanHelper.getBeanMap();
-        if(CollectionUtil.isNotEmpty(beanMap)) {
-//            遍历Bean Map
-            for (Map.Entry<Class<?>, Object> beanEntry : beanMap.entrySet()) {
-                //从BeanMap中获取Bean类与Bean实例
-                Class<?> beanClass = beanEntry.getKey();
-                Object beanInstance = beanEntry.getValue();
-                //获取bean类中所有字段,(不包括父类方法)
-                Field[] beanFields = beanClass.getDeclaredFields();
-                if(ArrayUtil.isNotEmpty(beanFields)) {
-                    //遍历Bean Field
-                    for(Field beanField : beanFields) {
-                        //判断当前Bean Field是否带有Inject注解
-                        if(beanField.isAnnotationPresent(Inject.class)) {
-                            //在bean Map 中获取 Bean Field对应的实例 获取bean字段对应的接口
-                            Class<?> interfaceClass = beanField.getType();
-                            //获取 bean字段对应的实现类
-                            Class<?> implementClass = findImplementClass(interfaceClass);
-                            if(implementClass != null) {
-                                //从BEANMAP 获取相应的实例
-                                Object implementInstance = beanMap.get(implementClass);
-                                if(implementInstance != null) {
-                                    /*beanField.setAccessible(true);
-                                    beanField.set(beanInstance, implementInstance);*/
-                                    //通过反射初始化BeanField的值
-                                    LOGGER.debug("beanInstance: " + beanInstance + "  beanField: " + beanField + "implementInstance" +
-                                            implementInstance);
-                                    //问题3,依赖注入失败. 设置成员的私有变量
-                                    ReflectionUtil.setField(beanInstance, beanField, implementInstance);
-
-                                } else {
-                                    throw new RuntimeException("依赖注入失败！类名：" + beanClass.getSimpleName() + "，字段名：" + interfaceClass.getSimpleName());
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
 }

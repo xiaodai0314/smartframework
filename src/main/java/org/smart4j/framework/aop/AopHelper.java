@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.smart4j.framework.annotation.Service;
 import org.smart4j.framework.aop.annotation.Aspect;
 import org.smart4j.framework.aop.proxy.Proxy;
+import org.smart4j.framework.aop.proxy.ProxyManager;
+import org.smart4j.framework.helper.BeanHelper;
 import org.smart4j.framework.helper.ClassHelper;
 import org.smart4j.framework.tx.TransactionProxy;
 
@@ -21,6 +23,12 @@ public class AopHelper {
         try {
             Map<Class<?>, Set<Class<?>>> proxyMap = createProxyMap();
             Map<Class<?>, List<Proxy>> targetMap = createTargetMap(proxyMap);
+            for (Map.Entry<Class<?>, List<Proxy>> targetEntry : targetMap.entrySet()) {
+                Class<?> targetClass = targetEntry.getKey();
+                List<Proxy> proxyList = targetEntry.getValue();
+                Object proxy = ProxyManager.createProxy(targetClass, proxyList);
+                BeanHelper.setBean(targetClass, proxy );
+            }
         } catch (Exception e) {
             LOGGER.error("aop failure", e);
         }
@@ -93,6 +101,24 @@ public class AopHelper {
                 // 初始化 Proxy Map
                 proxyMap.put(aspectProxyClass, targetClassList);
             }
+        }
+    }*/
+
+    //问题4.CGlib创建的对象会抛出toString异常,未解决
+    /*public static void doAopHelper() {
+        try {
+            Map<Class<?>, Set<Class<?>>> proxyMap = createProxyMap();
+            Map<Class<?>, List<Proxy>> targetMap = createTargetMap(proxyMap);
+            for (Map.Entry<Class<?>, List<Proxy>> targetEntry : targetMap.entrySet()) {
+                //TODO 测试AOP 需要删除
+                Map map =  BeanHelper.getBeanMap();
+                Class<?> targetClass = targetEntry.getKey();
+                List<Proxy> proxyList = targetEntry.getValue();
+                Object proxy = ProxyManager.createProxy(targetClass, proxyList);
+                BeanHelper.setBean(targetClass, proxy );
+            }
+        } catch (Exception e) {
+            LOGGER.error("aop failure", e);
         }
     }*/
 
