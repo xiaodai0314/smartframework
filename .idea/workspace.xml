@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96d45e08-e065-4103-8a24-ec9d6e82961a" name="Default Changelist" comment="修改map不能get key为对象的问题, 解决方法 重写hash和equals">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/FileParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/FormParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/RequestHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/UploadHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/tx/TransactionProxy$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/tx/TransactionProxy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapter1/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapter1/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapter1/.idea/encodings.xml" beforeDir="false" />
@@ -24,59 +31,26 @@
       <change beforePath="$PROJECT_DIR$/../chapter1/target/chapter1-1.0.0/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapter1/target/chapter1-1.0.0/WEB-INF/web.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapter1/target/classes/org/smart4j/chapter1/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartframework.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/ConfigConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/ConfigConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/DispatcherServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AspectProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AspectProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/ProxyChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/ProxyChain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/ProxyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/ProxyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/IocHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/IocHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/ConfigConstant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/DispatcherServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/HelperLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Impl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Inject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/annotation/Service.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/AopHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/AspectProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/annotation/Aspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/Proxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyChain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyManager$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Handler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Param.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/bean/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/BeanHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/ClassHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/ConfigHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/ControllerHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/Param.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/Param.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ConfigHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ConfigHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StreamUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StreamUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/DispatcherServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/DispatcherServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/AopHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/AopHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/AspectProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/AspectProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyChain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyChain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/aop/proxy/ProxyManager$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/DatabaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/DatabaseHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/IocHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/tx/annotation/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ArrayUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/CastUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ClassUtil$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ClassUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/CodecUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/CollectionUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/JsonUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/PropsUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/ReflectionUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/StreamUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/util/StringUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/IocHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/smart4j/framework/helper/IocHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/smart-framework-1.0.0.jar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -105,11 +79,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/DispatcherServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="106" column="37" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
+            <state relative-caret-position="383">
+              <caret line="54" column="82" selection-start-line="54" selection-start-column="82" selection-end-line="54" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,14 +91,111 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/DispatcherServlet.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/ReflectionUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="34" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="34" />
+            <state relative-caret-position="404">
+              <caret line="31" column="76" lean-forward="true" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/UploadHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="120" column="43" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/RequestHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/FileUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StringUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StreamUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="50" column="37" lean-forward="true" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ConfigHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="52" column="64" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+                <element signature="e#540#541#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#787#788#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/ConfigConstant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -166,15 +237,10 @@
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/annotation/Inject.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/PropsUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/CastUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/ConfigConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ConfigHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/CollectionUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/ArrayUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/Handler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/Param.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/CodecUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StreamUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/JsonUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/annotation/Test.java" />
@@ -197,8 +263,19 @@
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/ProxyManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AspectProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/proxy/ProxyChain.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/FormParam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/FileParam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StringUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/Param.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/uploadHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ConfigHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StreamUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/UploadHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/RequestHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/ConfigConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/DispatcherServlet.java" />
       </list>
     </option>
@@ -251,90 +328,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartframework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="tx" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,10 +338,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -440,7 +434,7 @@
       <workItem from="1561682061620" duration="13076000" />
       <workItem from="1561787765855" duration="15624000" />
       <workItem from="1562042151221" duration="34000" />
-      <workItem from="1562042202908" duration="10485000" />
+      <workItem from="1562042202908" duration="23072000" />
     </task>
     <task id="LOCAL-00001" summary="My first commit;">
       <created>1561340185611</created>
@@ -491,11 +485,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562036257873</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="AOP测试通过">
+      <created>1562119791898</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1562119791898</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85595000" />
+    <option name="totallyTimeSpent" value="98182000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,9 +509,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1953602" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1953602" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -519,7 +519,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.486569" visible="true" weight="0.3291536" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.486569" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.498779" weight="0.39916405" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -552,7 +552,8 @@
     <MESSAGE value="添加数据库访问功能 使用ThreadLocal" />
     <MESSAGE value="IOC测试通过,添加AOP功能,测试未通过" />
     <MESSAGE value="添加事务功能,未测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加事务功能,未测试" />
+    <MESSAGE value="AOP测试通过" />
+    <option name="LAST_COMMIT_MESSAGE" value="AOP测试通过" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,90 +572,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/PropsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="e#1354#1355#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
-            <element signature="e#1781#1782#0" expanded="true" />
-            <element signature="e#2181#2182#0" expanded="true" />
-            <element signature="e#2233#2234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/CastUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
-          <folding>
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#1628#1629#0" expanded="true" />
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1748#1749#0" expanded="true" />
-            <element signature="e#1788#1789#0" expanded="true" />
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2446#2447#0" expanded="true" />
-            <element signature="e#3076#3077#0" expanded="true" />
-            <element signature="e#3131#3132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/CollectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/ArrayUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/View.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/Data.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/CodecUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StreamUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -703,31 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-197">
           <caret line="124" column="18" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/ConfigConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/Param.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -824,34 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ClassHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-728">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ConfigHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ControllerHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -893,16 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4050">
-          <caret line="288" column="43" selection-start-line="288" selection-start-column="43" selection-end-line="288" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/tx/annotation/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -933,16 +791,6 @@
             <element signature="e#1159#1160#0" expanded="true" />
             <element signature="e#1539#1540#0" expanded="true" />
             <element signature="e#1576#1577#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/ReflectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1023,27 +871,181 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/FormParam.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        <state relative-caret-position="210">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/FileParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/aop/AopHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="106" column="37" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
+        <state relative-caret-position="292">
+          <caret line="111" column="87" selection-start-line="111" selection-start-column="87" selection-end-line="111" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ClassHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="96" column="6" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="238" column="10" selection-start-line="238" selection-start-column="10" selection-end-line="238" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/bean/Param.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1301">
+          <caret line="148" column="61" selection-start-line="148" selection-start-column="61" selection-end-line="148" selection-end-column="61" />
+          <folding>
+            <element signature="e#3734#3735#0" expanded="true" />
+            <element signature="e#3798#3799#0" expanded="true" />
+            <element signature="e#3888#3889#0" expanded="true" />
+            <element signature="e#3956#3957#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/StreamUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="50" column="37" lean-forward="true" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/UploadHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="120" column="43" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/RequestHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/util/ReflectionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="31" column="76" lean-forward="true" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/ConfigConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/helper/ConfigHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="52" column="64" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/smart4j/framework/DispatcherServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="34" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="34" />
+        <state relative-caret-position="383">
+          <caret line="54" column="82" selection-start-line="54" selection-start-column="82" selection-end-line="54" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

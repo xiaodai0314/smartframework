@@ -110,7 +110,6 @@ public class AopHelper {
             Map<Class<?>, Set<Class<?>>> proxyMap = createProxyMap();
             Map<Class<?>, List<Proxy>> targetMap = createTargetMap(proxyMap);
             for (Map.Entry<Class<?>, List<Proxy>> targetEntry : targetMap.entrySet()) {
-                //TODO 测试AOP 需要删除
                 Map map =  BeanHelper.getBeanMap();
                 Class<?> targetClass = targetEntry.getKey();
                 List<Proxy> proxyList = targetEntry.getValue();
