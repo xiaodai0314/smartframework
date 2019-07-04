@@ -95,5 +95,24 @@ public final class PropsUtil {
         }
         return value;
     }
+    // 获取数值型属性（带有默认值）
+    public static int getNumber(Properties props, String key, int defaultValue) {
+        int value = defaultValue;
+        if (props.containsKey(key)) {
+            value = CastUtil.castInt(props.getProperty(key));
+        }
+        return value;
+    }
+
+    /**
+     * 获取数值型属性
+     */
+    public static int getNumber(Properties props, String key) {
+        int value = 0;
+        if (props.containsKey(key)) {
+            value = CastUtil.castInt(props.getProperty(key));
+        }
+        return value;
+    }
 
 }

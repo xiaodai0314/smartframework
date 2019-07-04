@@ -5,11 +5,13 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.MapListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.smart4j.framework.util.CollectionUtil;
 import org.smart4j.framework.util.PropsUtil;
 
+import javax.sql.DataSource;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -60,6 +62,13 @@ public final class DatabaseHelper {
         } catch (ClassNotFoundException e) {
             LOGGER.error("can not loda jdbc driver", e);
         }
+    }
+
+    /**
+     * 获取数据源
+     */
+    public static DataSource getDataSource() {
+        return DATA_SOURCE;
     }
 
     /**
@@ -290,4 +299,17 @@ public final class DatabaseHelper {
             }
         }
     }
+
+    public static <T> T query(String sql, Object... params) {
+        T obj;
+        try {
+            obj = QUERY_RUNNER.query(sql, new ScalarHandler<>(), params);
+        } catch (SQLException e) {
+            LOGGER.error("查询出错！", e);
+            throw new RuntimeException(e);
+        }
+        return obj;
+    }
+
+
 }

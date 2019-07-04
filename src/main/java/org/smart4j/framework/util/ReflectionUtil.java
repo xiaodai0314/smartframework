@@ -26,6 +26,18 @@ public class ReflectionUtil {
         return instance;
     }
 
+    public static <T> T newInstance(String className) {
+        T instance;
+        try {
+            Class<?> commandClass = ClassUtil.loadClass(className);
+            instance = (T) commandClass.newInstance();
+        } catch (Exception e) {
+            LOGGER.error("创建实例出错！", e);
+            throw new RuntimeException(e);
+        }
+        return instance;
+    }
+
     /**
      * 调用方法
      */

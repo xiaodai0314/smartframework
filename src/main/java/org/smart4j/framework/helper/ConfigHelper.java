@@ -66,4 +66,46 @@ public class ConfigHelper {
     public static int getAppUploadLimit() {
         return PropsUtil.getInt(CONFIG_PROPS, ConfigConstant.APP_UPLOAD_LIMIT, 10);
     }
+
+    /**
+     * 获取 String 类型的属性值（可指定默认值）
+     */
+    public static String getString(String key, String defaultValue) {
+        return PropsUtil.getString(CONFIG_PROPS, key, defaultValue);
+    }
+    /**
+     * 获取 String 类型的属性值
+     */
+    public static String getString(String key) {
+        return PropsUtil.getString(CONFIG_PROPS, key);
+    }
+
+    /**
+     * 获取 int 类型的属性值
+     */
+    public static int getInt(String key) {
+        return PropsUtil.getNumber(CONFIG_PROPS, key);
+    }
+
+    /**
+     * 获取 int 类型的属性值（可指定默认值）
+     */
+    public static int getInt(String key, int defaultValue) {
+        return PropsUtil.getNumber(CONFIG_PROPS, key, defaultValue);
+    }
+
+    /**
+     * 获取 boolean 类型的属性值
+     */
+    public static boolean getBoolean(String key) {
+        return PropsUtil.getBoolean(CONFIG_PROPS, key);
+    }
+
+    /**
+     * 获取 int 类型的属性值（可指定默认值）
+     */
+    public static boolean getBoolean(String key, boolean defaultValue) {
+        return PropsUtil.getBoolean(CONFIG_PROPS, key, defaultValue);
+    }
+
  }
